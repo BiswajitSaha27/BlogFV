@@ -1,0 +1,11 @@
+h1 a,
+h2 a {
+    color: blue;
+}
+
+.sidebar-nav {
+    margin-top: 50px;
+    padding-bottom: 10;
+    list-style: none;
+    color: brown;
+}

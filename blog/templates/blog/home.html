@@ -1,0 +1,19 @@
+{% extends 'blog/layout.html' %}
+
+{% block content %}
+<h1>Blogs Home</h1>
+<p>
+    Welcome to Blog, a website developed by
+    <em>a novice</em>!
+</p>
+<h2>Dynamic content</h2>
+<p>The blog has the following record counts:</p>
+<ul>
+    <li><strong>Blogs:</strong> {{ num_blogs }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Num of visits:</strong> {{num_visits}}</li>
+</ul>
+<p>You have visited the page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+{% endblock %}

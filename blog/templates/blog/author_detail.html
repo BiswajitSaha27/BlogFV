@@ -1,0 +1,12 @@
+{% extends "blog/layout.html" %}
+
+{% block content %}
+<h1>Name: {{ author.first_name }}</h1>
+
+<p><strong>Blogs of this author are listed below:</strong></p>
+{% for copy in author.blog_set.all %}
+<li> <a href="{{ copy.get_absolute_url }}">{{ copy }}</a></li>
+{% endfor %}
+<!-- author detail link not yet defined -->
+<p><strong>Bio:</strong> {{ author.bio }}</p>
+{% endblock %}

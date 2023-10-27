@@ -10,10 +10,10 @@ class Author(models.Model):
     date_of_birth = models.DateField(null=True, blank=True)
 
     class Meta:
-        ordering = ['first_name', 'last_name']
+        ordering = ['last_name','first_name']
 
     def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
+        return reverse('author_detail', args=[str(self.id)])
     
     def __str__(self):
         return f'{self.first_name}, {self.last_name}'
@@ -33,7 +33,7 @@ class Blog(models.Model):
         self.save()
 
     def get_absolute_url(self):
-        return reverse('blog-detail', args=[str(self.id)])
+        return reverse('blog_detail', args=[str(self.id)])
     
     def __str__(self):
         return self.name

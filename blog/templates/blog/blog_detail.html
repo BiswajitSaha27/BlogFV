@@ -1,0 +1,11 @@
+{% extends "blog/layout.html" %}
+
+{% block content %}
+<h1>Title: {{ blog.name }}</h1>
+
+<p><strong>Author:</strong> <a href="{% url 'author_detail' blog.author.pk %}">{{ blog.author }}</a></p>
+<!-- author detail link not yet defined -->
+<p><strong>Summary:</strong> {{ blog.text }}</p>
+<p>Author name: <a href="{{ blog.author.get_absolute_url }}">{{ blog.author }}</a></p>
+
+{% endblock %}
